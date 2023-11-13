@@ -19,19 +19,17 @@ export const receivedQuote = (payload) => {
 export const handleAsync = () => {
     return dispatch => {
         dispatch(requestingQuote());
-
-        // API Call
-        fetch('https://api.quotable.io/random')
+        
+        // Setting delay for fadeIn and fadeOut effects
+        setTimeout(() => {
+            // API Call
+            fetch('https://api.quotable.io/random')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
                 dispatch(receivedQuote(data));
             })
-        // setTimeout(() => {
-        //     let data = {
-        //         content: "Hello"
-        //     }
-        //     dispatch(receivedQuote(data));
-        // }, 2500);
+        }, 500)
+        
     }
 }

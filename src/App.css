@@ -4,7 +4,7 @@ html {
 
 body {
   background-color: #333;
-  transition: 0.5s all linear;
+  transition: 0.5s background-color linear;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,12 +12,12 @@ body {
 }
 
 .fadeIn {
-  transition: 0.5s all linear;
+  transition: 0.5s opacity linear;
   opacity: 1;
 }
 
 .fadeOut {
-  transition: 0.5s all linear;
+  transition: 0.5s opacity linear;
   opacity: 0;
 }
 
@@ -25,31 +25,47 @@ body {
   width: 500px;
   padding: 1rem;
   background-color: white;
-  border-radius: 5px;
+  border: 2px solid black;
 }
 
 .quote {
+  font-weight: bold;
   font-size: 1.5rem;
+  padding: 0 1rem;
 }
 
 .author {
   text-align: end;
 }
 
-button {
+.btn-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
   padding: 0.5rem 1rem;
   color: white;
   font-size: 1rem;
   border: none;
   cursor: pointer;
-  transition: 0.5s all linear;
-  border-radius: 5px;
+  transition: 0.5s background-color linear;
 }
 
-button:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+.btn:hover {
+  outline: 2px solid black;
 }
 
-button:disabled {
+.btn:disabled {
   background-color: grey;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  margin: 0 1rem;
 }
