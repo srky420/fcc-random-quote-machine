@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 16px;
 }
@@ -26,8 +32,8 @@ body {
 
 .quote-box {
   position: relative;
-  width: 500px;
-  padding: 2rem;
+  width: 600px;
+  padding: 2rem 2.5rem;
   background-color: white;
   border-radius: 5px;
 }
@@ -74,6 +80,11 @@ body {
   opacity: 1;
 }
 
+.btn:disabled {
+  background-color: grey !important;
+  cursor: not-allowed;
+}
+
 .socials {
   display: flex;
   align-items: center;
@@ -82,8 +93,7 @@ body {
 .link {
   position: relative;
   text-align: center;
-  width: 1.5rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 5px;
   text-decoration: none;
   margin: 0 0.5rem 0 0;
@@ -95,7 +105,7 @@ body {
   font-size: 0.9rem;
   color: white;
   position: absolute;
-  top: 100%;
+  top: 105%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -109,7 +119,7 @@ body {
   font-size: 0.8rem;
   color: white;
   position: fixed;
-  bottom: 0;
+  bottom: 0.5rem;
   right: 1rem;
 }
 

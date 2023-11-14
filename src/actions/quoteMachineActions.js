@@ -29,6 +29,9 @@ export const handleAsync = () => {
                 console.log(data);
                 dispatch(receivedQuote(data));
             })
+            .catch(err => {
+                console.log(err);
+            })
         }, 500)
         
     }
