@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 html {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
@@ -9,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: 'Poppins', 'Verdana', 'sans-serif';
 }
 
 .fadeIn {
@@ -22,16 +25,16 @@ body {
 }
 
 .quote-box {
+  position: relative;
   width: 500px;
-  padding: 1rem;
+  padding: 2rem;
   background-color: white;
-  border: 2px solid black;
+  border-radius: 5px;
 }
 
 .quote {
   font-weight: bold;
-  font-size: 1.5rem;
-  padding: 0 1rem;
+  font-size: 1.7rem;
   text-align: center;
 }
 
@@ -40,25 +43,35 @@ body {
 }
 
 .btn-div {
+  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
 }
 
 .btn {
+  position: relative;
   padding: 0.5rem 1rem;
   color: white;
   font-size: 1rem;
   border: none;
   cursor: pointer;
   transition: 0.5s background-color linear;
+  border-radius: 5px;
 }
 
-.btn:hover {
-  outline: 2px solid black;
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.2s opacity linear;
 }
 
-.btn:disabled {
-  background-color: grey;
+.btn:hover .overlay, .link:hover .overlay {
+  opacity: 1;
 }
 
 .socials {
@@ -67,7 +80,44 @@ body {
 }
 
 .link {
+  position: relative;
+  text-align: center;
+  width: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 5px;
   text-decoration: none;
-  margin: 0 1rem;
-  color: grey;
+  margin: 0 0.5rem 0 0;
+  color: white;
+  transition: 0.5s background-color linear;
+}
+
+.creator {
+  font-size: 0.9rem;
+  color: white;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.creator a {
+  text-decoration: none;
+  color: white;
+}
+
+.created {
+  font-size: 0.8rem;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  right: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+  .quote-box {
+    width: 100%;
+  }
 }
